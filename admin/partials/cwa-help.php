@@ -1,5 +1,6 @@
 <?php
 function help_page(){
+	global $plugin_url;
  ?>
 	
 
@@ -19,7 +20,7 @@ function help_page(){
 		</ul>
 	    
 
-		<div class="welcome-panel custom-wp">
+		<div class="welcome-panel custom-wp help-page">
 			<div id="tab-container" class="tab-container">
 			  <ul class='etabs'>
 			    <li class='tab'><a href="#custom-widget-area"><span class="wp-menu-image dashicons-before dashicons-editor-help"></span>Custom widget area</a></li>
@@ -28,28 +29,57 @@ function help_page(){
 			  <div class="tab-content">
 				  <div id="custom-widget-area">
 				    <div class="how-to">
-						<h3>How to use?</h3>
+						<h2>How to use?</h2>
 						<p>
 							<ol class="list">
-								<li>Create a new Widget area.</li>
-								<li>Click on the "get code" link.</li>
-								<li>Copy the code and Paste it in a wordpress theme where you want to display it.</li>
+								<li><h4>Create a new Widget area.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_2.png" >
+								</li>
+								<li><h4>Click on the "get code" link.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_3.png" >
+								</li>
+								<li><h4>Copy the code</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_4.png" >
+								</li>
+								<li><h4>and Paste it in a wordpress theme where you want to display it.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_widget_codebase.png" >
+								</li>
+								<li><h4>Go to Dashboard Appearance > widgets and add widgets to widget area.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_manage_widget.png" >
+								</li>
+								<li><h4>Then reload your site.</h4>
+								</li>
 							</ol>
 						</p>
 						<br/>
-						<h4 style="margin-top: 0;">How to Use it in page or post content?</h4>
+						<h2 style="margin-top: 0;">How to Use it in page or post content?</h2>
 						<p>
 							<ol class="list">
-								<li>Click on the "get shortcode" link form widget area table below.</li>
-								<li>Copy the shortcode and Paste it in a post or page editor where you want to display it.</li>
+								<li><h4>Click on the "get shortcode" link form widget area table below.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_4.png" >
+								</li>
+								<li><h4>Copy the shortcode and Paste it in a post or page editor where you want to display it.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_widget_shortcode_admin.png" >
+								</li>
+								<li><h4>Reload your site.</h4>
 							</ol>
 						</p>	
 						<br/>
-						<h4 style="margin-top: 0;">How to customize widget style?</h4>
+						<h2 style="margin-top: 0;">How to customize widget style?</h2>
 						<p>
 							<ol class="list">
-								<li>Click on the advance link while creating new widget area and add widget class.</li>
-								<li>Add custom css targeting your widget area class. i.e. <br>
+								<li><h4>Click on the advance link while creating new widget area and add widget class.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_1_advance.png" >
+								</li>
+								<li><h4>Then add custom css targeting your widget area class. i.e. </h4><br>
 								<code>
 									.mynewwidgetareaclass a{
 										color: red;
@@ -67,24 +97,38 @@ function help_page(){
 						<h3>How to use?</h3>
 						<p>
 							<ol class="list">
-								<li>Create a new Menu Location.</li>
-								<li>Click on the "get code" link from table below.</li>
-								<li>Copy the code and Paste it in a wordpress theme where you want to display it.</li>
+								<li><h4>Create a new Menu Location.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_1.png" ></li>
+								<li><h4>Click on the "get code" link from table below.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_3.png" ></li>
+								<li><h4>Copy the code and Paste it in a wordpress theme where you want to display it.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_codebase.png" ></li>
+								<li><h4>assign menu to the location.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_admin.png" ></li>
+								<li><h4>Reload the site.</h4></li>
 							</ol>
 						</p>
 						<br/>
-						<h4 style="margin-top: 0;">How to Use it in page or post content?</h4>
+						<h3 style="margin-top: 0;">How to Use it in page or post content?</h3>
 						<p>
 							<ol class="list">
-								<li>Click on the "get shortcode" link form table below.</li>
-								<li>Copy the shortcode and Paste it in a post or page editor where you want to display it.</li>
+								<li><h4>Click on the "get shortcode" link form table below.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_4.png" ></li>
+								<li><h4>Copy the shortcode and Paste it in a post or page editor where you want to display it.</h4>
+									<br>
+									<img src="<?php echo $plugin_url;?>/admin/img/help/cwa_menu_shortcode_admin.png" ></li>
 							</ol>
 						</p>	
 						<br/>
-						<h4 style="margin-top: 0;">How to customize menu style?</h4>
+						<h3 style="margin-top: 0;">How to customize menu style?</h3>
 						<p>
 							<ol class="list">
-								<li>Pass the extra arguments while calling function<br>
+								<li><h4>Pass the extra arguments while calling function</h4><br>
 									i.e.<br>
 									<code>
 										wp_nav_menu( array( 'theme_location'	=> 'footer-location', 'menu_class'      => 'Cwa-menu', [arguments] => ['values']...	) );
@@ -94,8 +138,9 @@ function help_page(){
 									<br>
 									<pre style="word-wrap: break-word;">[Note: for shortcode pass arguments like <code>[menu theme_location='footer-location' 'menu_class'='Cwa-menu' [arguments]=[values]...]</code></pre>
 								</li>
-								<li>Make sure you have passed custom menu class options i.e. 'menu_class' like in above code.</li>
-								<li>Add custom css targeting your menu_class or container_class etc. i.e. <br>
+								<li><h4>Make sure you have passed custom menu class options i.e. 'menu_class' like in above code.</h4>
+									
+								<li><h4>Add custom css targeting your menu_class or container_class etc. i.e.</h4> <br>
 								<code>
 									.Cwa-menu a{
 										color: red;
