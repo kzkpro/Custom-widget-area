@@ -1,9 +1,3 @@
-
-
-
-
-
-
 (function( $ ) {
 	'use strict';
 
@@ -60,7 +54,9 @@
 		 	}
 		 	
 		 });
-
+		 $('.cwa-form input[name=cancel]').on('click', function(){
+		 	resetForm();
+		 });
 		$('#cwa-form input[name=cwa_name]').on('change', function(){
 			var widget_id = $('#cwa-form input[name=cwa_id]'),
 			cwaId = $(this).val().replace(/[^a-z0-9\s]/gi, '').replace(/[_\s]/g, '-').replace(/ /g,"-").toLowerCase();
@@ -71,9 +67,9 @@
 			}
 				
 		});
-		$('#cwa-form input[name=cwa_id]').on('change', function(){
+		$('#cwa-form input[name=cwa_id]').on('keyup', function(){
 			var self = this;
-			checkId(self, $(self).val());
+			checkId(self, $(self).val(), 'widget');
 		});
 		
 		
@@ -92,8 +88,8 @@
 			e.preventDefault();
 			var id = $(this).data('id');
 
-			$.post(ajaxurl,{'action': 'delete_cwa', 'data': {'cwa_id': id}}, function(data){ 
-				//console.log(data);
+			$.post(ajaxurl,{'action': 'delete_menu', 'data': {'cwa_id': id}}, function(data){ 
+				console.log(data);
 				showCwaError(data);
 				
 				reloadMenuTable();
@@ -126,7 +122,7 @@
 		 		});
 		 		//if(checkId(form_array.cwa_id)){	
 			 		$.post(ajaxurl,{'action': 'add_menu', 'data': form_array}, function(data){ 
-			 			console.log(data);
+			 			//console.log(data);
 						reloadMenuTable();
 						showCwaError(data);
 						
@@ -149,7 +145,11 @@
 				
 		});
 
-
+		$('#cwa-menu-form input[name=cwa_id]').on('keyup', function(){
+			console.log("hey");
+			var self = this;
+			checkId(self, $(self).val(), 'menu');
+		});
 		
 
 		$('.more').on('click', function(e){
@@ -181,7 +181,7 @@
 					$(self).next('.cwa-form-message').html("<label class='cwa-success' style='padding-left: 5px;'>"+data.message+"</label>");
 				}
 
-				//console.log(data);
+				console.log(data);
 			 });
 	};
 	function reloadCwaTable(){
@@ -212,7 +212,7 @@
 	}
 	function resetForm(){
 		$('.cwa-form input[type="text"]' ).val('');
-		$('.cwa-form  cwa-form-message' ).empty();
+		$('.cwa-form  .cwa-form-message' ).empty();
 	}
 	function runTooltip(){
 		$('.tooltip').tooltipster({
